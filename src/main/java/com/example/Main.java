@@ -10,9 +10,9 @@ public class Main {
          Biblioteca biblioteca = new Biblioteca();
 
          //creamos libros
-        Libro libro1 = new Libro("Pecar o morir", "Carlos Ojeda","14-2-58" , 1999, true);
-        Libro libro2 = new Libro("Paramos Dorados", "George Orwell", "978-0-452-28423-4", 1949, true);
-        Libro libro3 = new Libro("Cien años de soledad", "Gabriel García Márquez", "978-84-376-0494-7", 1967, true);
+        Libro libro1 = new Libro("La casa Azul", "Martin figueroa","13-2-98" , 1979, true);
+        Libro libro2 = new Libro("La casa amarilla", "Luis perez", "56-06-743", 1849, true);
+        Libro libro3 = new Libro("La casa roja", "Alex Cardenas", "4-4-7", 1767, true);
 
 
         // agregamos libros
@@ -21,8 +21,8 @@ public class Main {
         biblioteca.agregarLibro(libro3);
 
         // creamos usuarios
-        Usuario usuario1 = new Usuario(152752,"Carlos Blanco","carlos1@example.com");
-        Usuario usuario2 = new Usuario(224257,"Juan Perez","juan1@example.com");
+        Usuario usuario1 = new Usuario(152752,"Jesus Osuna","usajesuscash@gmail.com");
+        Usuario usuario2 = new Usuario(224257,"Alex Carnedas","alex@gmail.com");
 
         // registrar usuarios a la biblioteca
         biblioteca.registrarUsuario(usuario1);
@@ -32,14 +32,14 @@ public class Main {
         biblioteca.mostrarLibrosDisponibles();
 
         // como prestar libros a los usuarios
-         biblioteca.prestarLibro(usuario1, libro1, LocalDate.of(2025, 3, 10));
-        biblioteca.prestarLibro(usuario2, libro2, LocalDate.of(2025, 3, 15));
+         biblioteca.prestarLibro(usuario1, libro1, LocalDate.of(2025, 4, 13));
+        biblioteca.prestarLibro(usuario2, libro2, LocalDate.of(2025, 4, 9));
 
         // mostrar préstamos activos
         biblioteca.mostrarPrestamosActivos();
 
         // intentando prestar un libro ya prestado
-        biblioteca.prestarLibro(usuario1, libro1, LocalDate.of(2025, 3, 20));
+        biblioteca.prestarLibro(usuario1, libro1, LocalDate.of(2025, 4, 23));
 
         // Mostrar libros disponibles después de los préstamos
         biblioteca.mostrarLibrosDisponibles();
